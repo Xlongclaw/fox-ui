@@ -24,6 +24,7 @@ module.exports = {
     // Alias
     alias: {
       "@screens": path.resolve(__dirname, "src/screens/"),
+      "@components": path.resolve(__dirname, "src/components/"),
     },
   },
 

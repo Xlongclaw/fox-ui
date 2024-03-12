@@ -1,9 +1,12 @@
-import React from 'react'
+import NavigationBar from "@components/navigation-bar";
+import React from "react";
 
-const Home:React.FC = () => {
+const Home: React.FC = () => {
   return (
-    <div className='text-red-500 text-3xl'>Home</div>
-  )
-}
+    <div>
+      <NavigationBar />
+    </div>
+  );
+};
 
-export default Home
+export default Home;

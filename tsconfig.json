@@ -8,7 +8,8 @@
     "strict": false,
     "esModuleInterop": true,
     "paths": {
-      "@screens/*":["./src/screens/*"]
+      "@screens/*":["./src/screens/*"],
+      "@components/*":["./src/components/*"],
     }
   },
   "include": ["src/**/*"],
