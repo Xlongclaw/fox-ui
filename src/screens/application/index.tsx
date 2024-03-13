@@ -9,7 +9,7 @@ const Application: React.FC = () => {
       <NavigationBar />
       <div className="h-full flex mt-16">
         <Explorer />
-        <div className="ml-24 mr-24 mt-8 pl-72">
+        <div className="ml-20 mr-24 mt-4 pl-72">
           <MarkDownContainer />
         </div>
         <div className="">

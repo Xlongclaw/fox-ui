@@ -4,6 +4,7 @@ import React from "react";
 import SearchBar from "./search-bar";
 import XButton from "@components/x-button";
 import { BsGithub } from "react-icons/bs";
+import LinksContainer from "./links-container";
 
 type PropsType = {
   isBordered?: boolean;
@@ -17,12 +18,13 @@ type PropsType = {
 const NavigationBar: React.FC<PropsType> = ({ isBordered = true }) => {
   return (
     <div
-      className={classNames("flex glass justify-between px-16 py-3 fixed w-full h-16 items-center", {
+      className={classNames("flex glass justify-between px-12 py-3 fixed w-full h-16 items-center", {
         "border-b": isBordered === true,
       })}
     >
       <Logo />
-      <div className="flex gap-3">
+      <div className="flex gap-3 items-center">
+        <LinksContainer/>
         <SearchBar />
         <XButton hoverText="Github" onPress={()=>{}}>
           <BsGithub />

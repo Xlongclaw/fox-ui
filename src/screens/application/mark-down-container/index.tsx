@@ -10,17 +10,15 @@ import Mdxh2 from "@components/mdx-styled-components/Mdxh2";
 const MarkDownContainer = () => {
   return (
     <div className="flex-col">
-      <MDXProvider>
         <MarkDownFile
           components={{
             h1: Mdxh1,
-            a:Mdxa,
-            pre:Mdxpre,
-            p:Mdxp,
-            h2:Mdxh2
+            a: Mdxa,
+            pre: Mdxpre,
+            p: Mdxp,
+            h2: Mdxh2,
           }}
         />
-      </MDXProvider>
     </div>
   );
 };

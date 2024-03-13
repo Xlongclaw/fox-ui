@@ -37,4 +37,13 @@ body{
 .glass{
 background: rgba(255, 255, 255, 0.35);
 backdrop-filter: blur(9.3px);
+-webkit-backdrop-filter: blur(9.3px);
+}
+
+body::-webkit-scrollbar{
+ width: 8px;
+ border: 1px solid rgb(233, 233, 233);
+}
+body::-webkit-scrollbar-thumb{
+  background: #1f1f1fff;
 }
