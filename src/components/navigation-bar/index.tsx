@@ -17,7 +17,7 @@ type PropsType = {
 const NavigationBar: React.FC<PropsType> = ({ isBordered = true }) => {
   return (
     <div
-      className={classNames("flex justify-between px-16 py-3 items-center", {
+      className={classNames("flex glass justify-between px-16 py-3 fixed w-full h-16 items-center", {
         "border-b": isBordered === true,
       })}
     >

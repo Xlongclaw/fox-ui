@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+// import RemarkHTML from "remark-html";
 
 module.exports = {
   /**
@@ -43,6 +44,13 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
+      {
+        test: /.mdx?$/,
+        use: [
+          'babel-loader',
+          '@mdx-js/loader'
+        ]
+      }
     ],
   },
 
@@ -56,4 +64,10 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
+
+  devServer: {
+    static: path.resolve(__dirname, "./dist"),
+    hot: true,
+    historyApiFallback: true,
+  },
 };
