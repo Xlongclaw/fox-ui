@@ -10,14 +10,23 @@ const Application: React.FC = () => {
       <div className="h-full flex mt-16">
         <Explorer />
         <div className="ml-20 mr-24 mt-4 pl-72">
+          
           <MarkDownContainer />
         </div>
         <div className="">
           <div className="w-64 mt-8">
-            <h2 className="text-[13px] font-bold text-black/60 pb-3">CONTENTS</h2>
-            <div className="text-black/50 text-xs py-2 font-semibold">Props</div>
-            <div className="text-black/50 text-xs py-2 font-semibold">TextInput</div>
-            <div className="text-ascent text-xs py-2  font-semibold">Selected</div>
+            <h2 className="text-[13px] font-bold text-black/60 pb-3">
+              CONTENTS
+            </h2>
+            <div className="text-black/50 text-xs py-2 font-semibold">
+              Props
+            </div>
+            <div className="text-black/50 text-xs py-2 font-semibold">
+              TextInput
+            </div>
+            <div className="text-ascent text-xs py-2  font-semibold">
+              Selected
+            </div>
           </div>
         </div>
       </div>

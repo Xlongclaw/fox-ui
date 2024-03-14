@@ -8,8 +8,38 @@ This is a web application displaying all the UI components, so the developer sho
 
 ## Components 
 
-```js
-npm i fox-ui
+```jsx
+function naturalCompare(a, b) {
+   var ax = [], bx = [];
+
+   a.replace(/(\d+)|(\D+)/g, function (_, $1, $2) { ax.push([$1 || Infinity, $2 || ""]) });
+   b.replace(/(\d+)|(\D+)/g, function (_, $1, $2) { bx.push([$1 || Infinity, $2 || ""]) });
+
+   while (ax.length && bx.length) {
+     var an = ax.shift();
+     var bn = bx.shift();
+     var nn = (an[0] - bn[0]) || an[1].localeCompare(bn[1]);
+     if (nn) return nn;
+   }
+
+   return ax.length - bx.length;
+}
+
+let builds = [ 
+    { id: 1, name: 'Build 91'}, 
+    { id: 2, name: 'Build 32' }, 
+    { id: 3, name: 'Build 13' }, 
+    { id: 4, name: 'Build 24' },
+    { id: 5, name: 'Build 5' },
+    { id: 6, name: 'Build 56' }
+]
+
+let sortedBuilds = builds.sort((n1, n2) => {
+  return naturalCompare(n1.name, n2.name)
+})
+
+console.log('Sorted by name property')
+console.log(sortedBuilds)
 ```
 Upgrading from v5? See the migration guide.
 

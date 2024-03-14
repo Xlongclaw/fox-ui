@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+import { compile } from "@mdx-js/mdx"
+import rehypeHighlight from "rehype-highlight"
+
 const Mdxpre = styled.pre`
   font-size: 14px;
   color: #fff;
@@ -13,3 +16,12 @@ const Mdxpre = styled.pre`
 `;
 
 export default Mdxpre;
+
+
+// const code = `~~~js
+// console.log(1)
+// ~~~`
+
+// console.log(
+//   String(await compile(code, {rehypePlugins: [rehypeHighlight]}))
+// )
