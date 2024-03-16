@@ -4,7 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        "ascent":'#00c476'
+        "ascent":'#00c476',
+        "x-grey-I":"#575757",
+        "x-grey-II":"#303030",
+        "x-grey-II":"#171717"
       }
     },
   },

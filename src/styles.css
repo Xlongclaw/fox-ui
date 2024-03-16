@@ -8,6 +8,8 @@
 body{
   margin: 0;
   font-family: "Poppins", sans-serif;
+  background-color: rgb(9 9 11);
+  color: whitesmoke;
 }
 
 /* Fonts */
@@ -35,9 +37,10 @@ body{
 }
 
 .glass{
-background: rgba(255, 255, 255, 0.35);
-backdrop-filter: blur(9.3px);
--webkit-backdrop-filter: blur(9.3px);
+background: rgba(255, 255, 255, 0);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10.9px);
+-webkit-backdrop-filter: blur(10.9px);
 }
 
 body::-webkit-scrollbar{

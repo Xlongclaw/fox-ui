@@ -10,14 +10,14 @@ const Explorer = () => {
     <motion.div
       onHoverEnd={() => setHovered(false)}
       onHoverStart={() => setHovered(true)}
-      className={classNames("border-r h-full w-72 flex-shrink-0 fixed px-12 shado overflow-y-scroll custom-scroll transition-all",{
+      className={classNames("border-r border-x-grey-II h-full w-72 flex-shrink-0 fixed px-12 shado overflow-y-scroll custom-scroll transition-all",{
         "custom-scroll":hovered=== true,
         "hide-scroll":hovered=== false
       })}
     >
       {dummy.map((item) => (
         <div className="">
-          <h2 className="flex items-center text-[13px] font-bold text-black/60 pt-6 pb-2 justify-between">
+          <h2 className="flex items-center text-[13px] font-bold text-white pt-6 pb-2 justify-between">
             {item.category}
             {/* <BsPlus size={20} /> */}
           </h2>
@@ -28,7 +28,7 @@ const Explorer = () => {
                 x: 6,
                 y: 1,
               }}
-              className="text-[13px] cursor-pointer py-[6px] text-black/40 font-medium"
+              className="text-[13px] cursor-pointer py-[6px] text-white/70"
             >
               {title}
             </motion.h5>
