@@ -27,6 +27,7 @@ module.exports = {
       "@screens": path.resolve(__dirname, "src/screens/"),
       "@components": path.resolve(__dirname, "src/components/"),
       "@images": path.resolve(__dirname, "src/images/"),
+      "@fox-components": path.resolve(__dirname, "src/fox-components/"),
     },
   },
 

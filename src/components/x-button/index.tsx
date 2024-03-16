@@ -38,7 +38,7 @@ const XButton: React.FC<PropsType> = ({
       onHoverEnd={() => setHovered(false)}
       animate={buttonAnimation(hovered)}
       onClick={onPress}
-      className={classNames("border relative h-10 w-10 rounded-lg flex justify-center items-center",{})}
+      className={classNames("border border-black relative h-10 w-10 rounded-lg flex justify-center items-center",{})}
     >
       {children}
       {title}

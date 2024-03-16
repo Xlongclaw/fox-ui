@@ -11,6 +11,7 @@
       "@screens/*":["./src/screens/*"],
       "@components/*":["./src/components/*"],
       "@images/*":["./src/images/*"],
+      "@fox-components/*":["./src/fox-components/*"],
     }
   },
   "include": ["src/**/*"],

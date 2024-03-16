@@ -1,9 +1,14 @@
 import React from "react";
 import * as Icons from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const Logo = () => {
+  const navigate = useNavigate();
   return (
-    <div className="flex gap-4 items-center ">
+    <div
+      onClick={() => navigate("/")}
+      className="flex gap-4 items-center cursor-pointer"
+    >
       <div>
         <Icons.BsUnity size={24} className="" />
       </div>

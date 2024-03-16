@@ -5,9 +5,11 @@ import SearchBar from "./search-bar";
 import XButton from "@components/x-button";
 import { BsGithub } from "react-icons/bs";
 import LinksContainer from "./links-container";
+import { motion } from "framer-motion";
 
 type PropsType = {
   isBordered?: boolean;
+  glassEffect?:boolean
 };
 
 /**
@@ -15,11 +17,24 @@ type PropsType = {
  * @param param0 - Component Props.
  * @returns a JSX NavBar Element
  */
-const NavigationBar: React.FC<PropsType> = ({ isBordered = true }) => {
+const NavigationBar: React.FC<PropsType> = ({ isBordered = true,glassEffect=true }) => {
   return (
-    <div
-      className={classNames("flex glass z-10 justify-between px-12 py-3 fixed w-full h-16 items-center", {
-        "border-b border-x-grey-II": isBordered === true,
+    <motion.div
+    initial={{
+      y: -50,
+    }}
+    whileInView={{
+      y: 0,
+      opacity: [0, 0, 1],
+      transition: {
+        stiffness: 200,
+        damping: 60,
+        type: "spring",
+      },
+    }}
+      className={classNames("flex z-10 justify-between px-12 py-3 fixed w-full h-16 items-center", {
+        " border-x-grey-II": isBordered === true,
+        "glass border-b":glassEffect ===true
       })}
     >
       <Logo />
@@ -27,10 +42,10 @@ const NavigationBar: React.FC<PropsType> = ({ isBordered = true }) => {
         <LinksContainer/>
         <SearchBar />
         <XButton hoverText="Github" onPress={()=>{}}>
-          <BsGithub />
+          <BsGithub color="#00c476" />
         </XButton>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
