@@ -9,7 +9,7 @@ import Mdxh2 from "@components/mdx-styled-components/Mdxh2";
 import { compile } from "@mdx-js/mdx";
 import rehypeHighlight from "rehype-highlight";
 import CodeBlock from "@components/code-block";
-import style from "react-syntax-highlighter/dist/cjs/styles/prism/coldark-dark";
+import style from "react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark-reasonable";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
 const MarkDownContainer = () => {
@@ -24,7 +24,16 @@ const MarkDownContainer = () => {
           pre: (props: any) => {
             return (
               <div className="text-sm">
-                <SyntaxHighlighter customStyle={{borderRadius:10}} language="typescript" style={style}>
+                <SyntaxHighlighter
+                  customStyle={{
+                    borderRadius: 10,
+                    backgroundColor: "rgb(14 14 16)",
+                    border: "1px solid #171717",
+                    padding:24
+                  }}
+                  language="typescript"
+                  style={style}
+                >
                   {String(props.children.props.children)}
                 </SyntaxHighlighter>
               </div>

@@ -45,8 +45,8 @@ backdrop-filter: blur(10.9px);
 
 body::-webkit-scrollbar{
  width: 8px;
- border: 1px solid rgb(233, 233, 233);
+ border: 1px solid rgb(24, 24, 27);
 }
 body::-webkit-scrollbar-thumb{
-  background: #1f1f1fff;
+  background: #323232;
 }
