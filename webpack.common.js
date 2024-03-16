@@ -26,6 +26,7 @@ module.exports = {
     alias: {
       "@screens": path.resolve(__dirname, "src/screens/"),
       "@components": path.resolve(__dirname, "src/components/"),
+      "@images": path.resolve(__dirname, "src/images/"),
     },
   },
 
@@ -50,7 +51,22 @@ module.exports = {
           'babel-loader',
           '@mdx-js/loader'
         ]
-      }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i, 
+        loader: 'file-loader'
+    },
+    {
+      test: /\.svg$/,
+      use: [
+        {
+          loader: 'svg-url-loader',
+          options: {
+            limit: 10000,
+          },
+        },
+      ],
+    },
     ],
   },
 

@@ -1,6 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import NetPattern from "@components/net-pattern";
+import EcomCard from "../ecom-card";
+import headPhone from "@images/headphone3.jpg";
+import headPhone1 from "@images/headphone.jpg";
+import headPhone2 from "@images/headphone1.jpg";
 
 const DisplayContainer = () => {
   const [codeVisible, setCodeVisible] = React.useState(false);
@@ -17,8 +21,34 @@ const DisplayContainer = () => {
           code
         </button>
       </div>
-      <div className="h-[35rem] w-[50rem] border border-x-grey-II rounded-[20px] relative overflow-hidden">
+      <div className="h-[40rem] w-full border border-x-grey-II rounded-[20px] relative overflow-hidden justify-center items-center flex gap-4">
         <NetPattern />
+        <EcomCard
+          data={{
+            images: [headPhone, headPhone2, headPhone1],
+            itemName: "Wireless Headphone With ANC",
+            description:
+              "From aeroplane noise to conversations, the SONY WH-1000XM5 Bluetooth Headphones can effectively block out high and mid-frequency sounds.",
+            brand: "SONY",
+            discount: 30,
+            price: 8999,
+            rating: 4.6,
+            sold: 4567,
+          }}
+          animateOnHover
+        />
+        <EcomCard
+          data={{
+            images: [headPhone, headPhone2, headPhone1],
+            itemName: "Wireless Headphone With ANC",
+            brand: "SONY",
+            discount: 30,
+            price: 8999,
+            rating: 4.6,
+            sold: 4567,
+          }}
+          animateOnHover
+        />
       </div>
     </div>
   );
