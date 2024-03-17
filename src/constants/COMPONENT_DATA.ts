@@ -3,6 +3,7 @@ const COMPONENTS_DATA = [
     componentName: "Ecommerce Card",
     component: require("@fox-components/ecom-card"),
     markdown: require("@fox-components/ecom-card/ecom-card.md"),
+    // displayCode:
   },
   {
     componentName: "OtpField",

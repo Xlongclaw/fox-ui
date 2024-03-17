@@ -1,5 +1,5 @@
 import React from "react";
-import { slow } from "../slow-ui";
+import { slow } from "@fox-components/slow-ui";
 
 type PropsType = {
   country: string;

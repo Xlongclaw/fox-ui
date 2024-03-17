@@ -1,18 +1,21 @@
-import { MDXProvider } from "@mdx-js/react";
+// import { MDXProvider } from "@mdx-js/react";
 import MarkDownFile from "../../../../readme.md";
-import Mdxh1 from "@components/mdx-styled-components/Mdxh1";
+// import Mdxh1 from "@components/mdx-styled-components/Mdxh1";
 import React from "react";
 import Mdxa from "@components/mdx-styled-components/Mdxa";
-import Mdxpre from "@components/mdx-styled-components/Mdxpre";
+// import Mdxpre from "@components/mdx-styled-components/Mdxpre";
 import Mdxp from "@components/mdx-styled-components/Mdxp";
 import Mdxh2 from "@components/mdx-styled-components/Mdxh2";
-import { compile } from "@mdx-js/mdx";
-import rehypeHighlight from "rehype-highlight";
-import CodeBlock from "@components/code-block";
+// import { compile } from "@mdx-js/mdx";
+// import rehypeHighlight from "rehype-highlight";
+// import CodeBlock from "@components/code-block";
 import style from "react-syntax-highlighter/dist/cjs/styles/hljs/atom-one-dark-reasonable";
 import SyntaxHighlighter from "react-syntax-highlighter";
+import { useParams } from "react-router-dom";
+// import COMPONENTS_DATA from "../../../constants/COMPONENT_DATA";
 
 const MarkDownContainer = () => {
+  const { name } = useParams();
   const [codee, setCode] = React.useState<any>();
   return (
     <div className="flex-col">

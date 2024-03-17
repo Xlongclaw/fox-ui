@@ -6,11 +6,12 @@ import headPhone from "@images/headphone3.jpg";
 import headPhone1 from "@images/headphone.jpg";
 import headPhone2 from "@images/headphone1.jpg";
 import shoe1 from "@images/shoe1.jpg";
-import shoe2 from "@images/shoe2.jpg";
 import shoe3 from "@images/shoe3.jpg";
 import shoe4 from "@images/shoe4.jpg";
+import { useParams } from "react-router-dom";
 
 const DisplayContainer = () => {
+  const { name } = useParams();
   const [codeVisible, setCodeVisible] = React.useState(false);
   return (
     <div className="my-12">
@@ -52,13 +53,13 @@ const DisplayContainer = () => {
             sold: 4567,
           }}
           style={{
-            backgroundColor:'#4e4e4e20',
-            width:288,
-            borderRadius:18,
-            padding:8,
-            themeColor:'#f54266',
-            textColor:'#fff',
-            borderColor:"#e1e1e130"
+            backgroundColor: "#4e4e4e20",
+            width: 288,
+            borderRadius: 18,
+            padding: 8,
+            themeColor: "#f54266",
+            textColor: "#fff",
+            borderColor: "#e1e1e130",
           }}
           animateOnHover
         />

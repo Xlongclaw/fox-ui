@@ -82,9 +82,11 @@ module.exports = {
     }),
   ],
 
+  output: { publicPath: '/' },
   devServer: {
-    static: path.resolve(__dirname, "./dist"),
-    hot: true,
+
+    // static: path.resolve(__dirname, "./dist"),
+    // hot: true,
     historyApiFallback: true,
   },
 };

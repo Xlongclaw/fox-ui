@@ -13,6 +13,7 @@
       "@images/*":["./src/images/*"],
       "@fox-components/*":["./src/fox-components/*"],
     }
+    
   },
   "include": ["src/**/*"],
 }
