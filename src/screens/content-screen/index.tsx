@@ -12,8 +12,10 @@ const ContentScreen = () => {
         if (name === component.componentName)
           return (
             <>
-              <DisplayContainer  />
-              <MarkDownContainer />
+              <DisplayContainer
+                component={React.createElement(component.displayComponent)}
+              />
+              <MarkDownContainer markdown={component.markdown} />
             </>
           );
       })}
