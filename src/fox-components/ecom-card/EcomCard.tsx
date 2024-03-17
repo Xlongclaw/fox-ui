@@ -28,7 +28,7 @@ type PropsType = {
     themeColor?: string;
     backgroundColor?: string;
     borderRadius?: number;
-    textColor?:string
+    textColor?: string;
   };
   animateOnHover?: boolean;
 };
@@ -42,7 +42,7 @@ const EcomCard = ({
     borderColor: "rgb(48 48 48)",
     width: 288,
     borderRadius: 24,
-    textColor:'#fff'
+    textColor: "#fff",
   },
 
   animateOnHover = false,
@@ -54,16 +54,13 @@ const EcomCard = ({
           scale: 1.02,
         }
       }
-      // whileInView={
-      //   animateOnView && {
-      //     scale: [0.9, 1],
-      //     opacity: [0, 1],
-      //     transition: {
-      //       duration: 0.4,
-      //       delay: 0.2,
-      //     },
-      //   }
-      // }
+      whileInView={{
+        opacity: [0, 1],
+        transition: {
+          duration: 0.4,
+          delay: 0.2,
+        },
+      }}
       style={{
         padding: style.padding,
         border: `1px solid ${style.borderColor}`,
@@ -71,6 +68,7 @@ const EcomCard = ({
         backgroundColor: style.backgroundColor,
         width: style.width,
         cursor: "pointer",
+        opacity:0
       }}
     >
       <ImageContainer images={data.images} themeColor={style.themeColor} />

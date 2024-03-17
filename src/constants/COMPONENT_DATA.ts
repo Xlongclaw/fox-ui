@@ -3,7 +3,7 @@ import React from "react";
 const COMPONENTS_DATA = [
   {
     componentName: "Ecommerce Card",
-    component: require("@fox-components/ecom-card"),
+    component: EcomCard.default,
     markdown: EcomCard.Markdown,
     displayComponent: EcomCard.DisplayComponent,
   },
