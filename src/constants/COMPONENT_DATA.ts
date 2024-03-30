@@ -1,10 +1,10 @@
 import * as EcomCard from "@fox-components/ecom-card";
-import React from "react";
 const COMPONENTS_DATA = [
   {
     componentName: "Ecommerce Card",
+    componentDescription: "It is custom components by fox UI that can be easily consumed by a developer developing any Ecommerce application in just few steps.",
     component: EcomCard.default,
-    markdown: EcomCard.Markdown,
+    Markdown: EcomCard.Markdown,
     displayComponent: EcomCard.DisplayComponent,
   },
 ];

@@ -8,16 +8,19 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 const DisplayContainer = ({
   displayComponent,
   component,
+  componentName
 }: {
   displayComponent: React.FunctionComponentElement<{}>;
   component: any;
+  componentName:string
 }) => {
   const [codeVisible, setCodeVisible] = React.useState(false);
   React.useEffect(() => {}, []);
 
   return (
     <div className="my-12">
-      <div className="flex text-sm gap-2 my-4">
+      <div className="flex text-sm  my-4 items-center justify-between">
+        <div className="flex gap-2">
         <button
           onClick={() => setCodeVisible(false)}
           className={`py-2 px-4 border hover:border-x-grey-II border-zinc-950  rounded-xl ${
@@ -34,6 +37,9 @@ const DisplayContainer = ({
         >
           code
         </button>
+
+        </div>
+        <h1 className="text-xs">{componentName.toUpperCase()}</h1>
       </div>
       {codeVisible ? (
         <div className="overflow-y-scroll relative hide-scroll w-[68rem] max-h-[40rem] bg-neutral-900

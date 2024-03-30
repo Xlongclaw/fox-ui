@@ -4,6 +4,7 @@ It is custom components by fox UI that can be easily consumed by a developer dev
 It can be easily customised as per your own Requirements.
 
 ## Installation
+
 Just copy the following command on your terminal.
 ```
 npm i @fox/ecom-card

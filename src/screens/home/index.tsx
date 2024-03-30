@@ -2,8 +2,10 @@ import BgAnim from "@components/bg-anim";
 import NavigationBar from "@components/navigation-bar";
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Home: React.FC = () => {
+  const navigate = useNavigate()
   return (
     <div className="relative overflow-hidden h-screen">
       <BgAnim />
@@ -32,12 +34,12 @@ const Home: React.FC = () => {
             websites without having to worry about styling and animations.
           </h2>
           <div className="flex gap-3 mt-8">
-            <button className="py-4 border-2 px-6 rounded-3xl bg-white text-black hover:bg-transparent hover:text-white transition-all">
+            <button onClick={()=>navigate('/application')} className="py-4 border-2 px-6 rounded-3xl bg-white text-black hover:bg-transparent hover:text-white transition-all">
               Browse Components
             </button>
-            <button className="py-4 border-2 px-6 rounded-3xl  hover:bg-white hover:text-black transition-all">
+            <a href="https://portfolio-omega-ruby-26.vercel.app/" className="py-4 border-2 px-6 rounded-3xl  hover:bg-white hover:text-black transition-all">
               Hire us
-            </button>
+            </a>
           </div>
         </div>
         <div></div>

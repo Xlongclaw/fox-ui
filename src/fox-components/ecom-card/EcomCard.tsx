@@ -6,9 +6,25 @@ import DetailsContainer from "./details-container";
 import ImageContainer from "./image-container";
 
 /**
- * PropsType of this Component :-
- * props.data -> All the data of the ecommerce Item.
- * props.style -> Changeable Card Styles
+ * PropsType of this Component:
+ * @param {Object} data - All the data of the ecommerce Item.
+ *   @param {Array} images - Array of image URLs.
+ *   @param {string} [brand] - Brand of the item (optional).
+ *   @param {string} itemName - Name of the item.
+ *   @param {string} [description] - Description of the item (optional).
+ *   @param {number} [rating] - Rating of the item (optional).
+ *   @param {number} [price] - Price of the item (optional).
+ *   @param {number} [discount] - Discount percentage of the item (optional).
+ *   @param {number} [sold] - Number of items sold (optional).
+ * @param {Object} [style] - Changeable Card Styles.
+ *   @param {string} [borderColor] - Border color of the card.
+ *   @param {number} [padding] - Padding of the card.
+ *   @param {number} [width] - Width of the card.
+ *   @param {string} [themeColor] - Theme color of the card.
+ *   @param {string} [backgroundColor] - Background color of the card.
+ *   @param {number} [borderRadius] - Border radius of the card.
+ *   @param {string} [textColor] - Text color of the card.
+ * @param {boolean} [animateOnHover] - Whether to animate the card on hover.
  */
 type PropsType = {
   data: {
@@ -44,16 +60,13 @@ const EcomCard = ({
     borderRadius: 24,
     textColor: "#fff",
   },
-
   animateOnHover = false,
 }: PropsType) => {
   return (
     <motion.div
-      whileHover={
-        animateOnHover && {
-          scale: 1.02,
-        }
-      }
+      // Animate card on hover if enabled
+      whileHover={animateOnHover && { scale: 1.02 }}
+      // Animate card when it comes into view
       whileInView={{
         opacity: [0, 1],
         transition: {
@@ -68,11 +81,14 @@ const EcomCard = ({
         backgroundColor: style.backgroundColor,
         width: style.width,
         cursor: "pointer",
-        opacity:0
+        // Set initial opacity to 1 for entrance animation visibility
+        opacity: 1,
       }}
     >
+      {/* Image Container */}
       <ImageContainer images={data.images} themeColor={style.themeColor} />
       <div className="px-4 mt-2 text-sm">
+        {/* Details Container */}
         <DetailsContainer
           brand={data.brand}
           description={data.description}
@@ -81,7 +97,9 @@ const EcomCard = ({
           textColor={style.textColor}
         />
         <div>
+          {/* Rating Container */}
           <RatingContainer textColor={style.textColor} />
+          {/* Price Container */}
           <PriceContainer
             discount={data.discount}
             price={data.price}
@@ -95,3 +113,4 @@ const EcomCard = ({
 };
 
 export default EcomCard;
+
