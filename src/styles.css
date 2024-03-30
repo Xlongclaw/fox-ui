@@ -40,6 +40,26 @@ backdrop-filter: blur(10.9px);
 -webkit-backdrop-filter: blur(10.9px);
 }
 
+.glass2{
+  /* From https://css.glass */
+background: rgba(72, 72, 72, 0.32);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(17.6px);
+-webkit-backdrop-filter: blur(17.6px);
+border: 1px solid rgba(72, 72, 72, 0.3);
+}
+
+.glass3{
+  /* From https://css.glass */
+background: rgba(72, 72, 72, 0.69);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(17.6px);
+-webkit-backdrop-filter: blur(17.6px);
+border: 1px solid rgba(72, 72, 72, 0.3);
+}
+
 body::-webkit-scrollbar{
  width: 8px;
  border: 1px solid rgb(24, 24, 27);

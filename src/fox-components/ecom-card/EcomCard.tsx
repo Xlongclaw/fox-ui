@@ -113,4 +113,3 @@ const EcomCard = ({
 };
 
 export default EcomCard;
-
