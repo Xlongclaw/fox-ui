@@ -42,7 +42,7 @@ const NavigationBar: React.FC<PropsType> = ({ isBordered = true,glassEffect=true
         <LinksContainer/>
         <SearchBar />
         <XButton hoverText="Github" onPress={()=>{}}>
-          <BsGithub color="#00c476" />
+          <BsGithub className="text-ascent" />
         </XButton>
       </div>
     </motion.div>

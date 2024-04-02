@@ -1,5 +1,5 @@
 const buttonAnimation = (hovered:boolean) => ({
-  borderColor: hovered ? "#000000" : "#00c47660",
+  borderColor: hovered ? "#000000" : "",
   transition: { duration: 0.5 },
 });
 

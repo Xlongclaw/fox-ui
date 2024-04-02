@@ -18,7 +18,8 @@ const DisplayContainer = ({
   React.useEffect(() => {}, []);
 
   return (
-    <div className="my-12">
+    <div className="my-12 relative">
+   
       <div className="flex text-sm  my-4 items-center justify-between">
         <div className="flex gap-2">
         <button

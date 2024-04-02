@@ -38,13 +38,13 @@ const XButton: React.FC<PropsType> = ({
       onHoverEnd={() => setHovered(false)}
       animate={buttonAnimation(hovered)}
       onClick={onPress}
-      className={classNames("border border-black relative h-10 w-10 rounded-lg flex justify-center items-center",{})}
+      className={classNames("borde border-x-grey-III relative h-10 w-10 rounded-lg flex justify-center items-center",{})}
     >
       {children}
       {title}
       <motion.div
         animate={infoTextAnimation(hovered)}
-        className="absolute top-12 opacity-0 border-2 border-black/60 text-xs pointer-events-none px-2 py-1 rounded-lg bg-white"
+        className="absolute top-12 opacity-0 glass border-2  text-xs pointer-events-none px-2 py-1 rounded-lg bg-white"
       >
         {hoverText}
       </motion.div>
