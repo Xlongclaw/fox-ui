@@ -1,21 +1,15 @@
 const dummy = [
   {
     category: "Follow for updates",
-    data: [
-      "Twitter @xlongclaw"
-    ],
+    data: ["Twitter @xlongclaw"],
   },
   {
     category: "Getting Started",
-    data: [
-      "Overview","Installation","Usage","Learn","FAQs"
-    ],
+    data: ["Overview", "Installation", "Usage", "Learn", "FAQs"],
   },
   {
     category: "All Components",
-    data: [
-      "Ecommerce Card",
-    ],
+    data: [],
   },
 ];
 

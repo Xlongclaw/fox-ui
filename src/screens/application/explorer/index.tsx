@@ -4,6 +4,7 @@ import dummy from "../../../constants/dummy";
 import { MotionValue, motion } from "framer-motion";
 import classNames from "classnames";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import COMPONENTS_DATA from "../../../constants/COMPONENT_DATA";
 
 const Explorer = () => {
   const { name } = useParams();
@@ -48,6 +49,24 @@ const Explorer = () => {
             </motion.h5>
           ))}
         </div>
+      ))}
+      {COMPONENTS_DATA.map((component) => (
+        <motion.h5
+          onClick={() => {
+            setSelected(component.componentName);
+            naigate(`/application/components/${component.componentName}`);
+          }}
+          whileHover={{
+            color: "#00c476",
+            x: 6,
+            y: 1,
+          }}
+          className={`text-[13px] cursor-pointer py-[6px] ${
+            selected === component.componentName ? "text-[#00c476]" : "text-white/70"
+          }`}
+        >
+          {component.componentName}
+        </motion.h5>
       ))}
     </motion.div>
   );
